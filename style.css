@@ -1,0 +1,72 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: #f4f4f9;
+}
+
+/* Part 1: CSS Transitions & Animations */
+.fancy-btn {
+  padding: 10px 20px;
+  background: royalblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.fancy-btn:hover {
+  background: dodgerblue;
+  transform: scale(1.1);
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin: 20px auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+/* Part 3: JS-triggered Animations */
+.js-box {
+  width: 100px;
+  height: 100px;
+  background: teal;
+  margin: 20px auto;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+
+.js-box.active {
+  transform: rotate(360deg) scale(1.2);
+  background: gold;
+}
+
+/* Modal styles */
+.modal {
+  display: none; 
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
